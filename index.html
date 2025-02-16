@@ -1,68 +1,98 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Me</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            line-height: 1.6;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        .main-info {
-            background: #333;
-            color: #fff;
-            padding: 20px;
-        }
-        .main-info h1 {
-            margin: 0;
-        }
-        .hobbies, .career, .course, .fun-fact {
-            background: #e7e7e7;
-            padding: 15px;
-            margin-bottom: 10px;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Innovators - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container">
-        <header class="main-info">
-            <h1>Your Name: Maram Senan</h1>
-            <p>Preferred Name: Maram</p>
-            <p>Current/Recent Job Title: Professional Student</p>
-        </header>
-
-        <section class="career">
-            <h2>Job Responsibilities</h2>
-            <p>Study at home and attend classes</p>
-        </section>
-
-        <section class="hobbies">
-            <h2>Hobbies and Special Interests</h2>
-            <p>Playing piano and watching "Law and Order."</p>
-        </section>
-
-        <section class="career">
-            <h2>Career Goal</h2>
-            <p>To become a data scientist and be successful.</p>
-        </section>
-
-        <section class="course">
-            <h2>Reasons for Taking This Course</h2>
-            <p>Because I need it for Senior Design 1.</p>
-        </section>
-
-        <section class="fun-fact">
-            <h2>Fun Fact</h2>
-            <p>I love to bake when I'm bored, especially tiramisu.</p>
-        </section>
-
-        <br>
-        <p>last updated on 02/02/2025</p>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="https://source.unsplash.com/200x100/?logo,branding" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Innovative Web Solutions</p>
+                <h1>Welcome to <span>The Innovators</span></h1>
+            </div>
+        </div>
     </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="https://source.unsplash.com/400x400/?team,people">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Us</h1>
+                    <p>We are a group of innovators dedicated to creating modern and functional websites as part of our assignments.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">Our Work</h1>
+            <div class="work-grid">
+                <div class="work-box">
+                    <img src="https://source.unsplash.com/500x300/?technology,website">
+                    <h3>Project One</h3>
+                    <p>A modern website focusing on UI/UX.</p>
+                </div>
+                <div class="work-box">
+                    <img src="https://source.unsplash.com/500x300/?coding,design">
+                    <h3>Project Two</h3>
+                    <p>Innovative coding solutions for businesses.</p>
+                </div>
+                <div class="work-box">
+                    <img src="https://source.unsplash.com/500x300/?future,development">
+                    <h3>Future Projects</h3>
+                    <p>Future assignments will be updated accordingly.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Us</h1>
+                    <p><i class="fas fa-paper-plane"></i> contact@innovators.com</p>
+                    <p><i class="fas fa-phone-square-alt"></i> +971 12345678</p>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openmenu() {
+            document.getElementById("sidemenu").style.right = "0";
+        }
+        function closemenu() {
+            document.getElementById("sidemenu").style.right = "-200px";
+        }
+    </script>
 </body>
 </html>
